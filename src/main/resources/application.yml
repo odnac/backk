@@ -1,6 +1,26 @@
 spring:
+  profiles:
+    active: local # 기본 환경 선택
+
+# Local 환경
+---
+spring:
+  profiles:
+    active: local
+  datasource:
+    data: classpath:data-h2.sql
+    url: jdbc:h2:mem:testdb # 스트링부트 버전 2.0이상이면 url을 지정해야함
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      use-new-id-generator-mappings: false # 스트링부트 2.0 이상부터는 Hibernate의 id의 defualt값 true로 설정되어 있음
   h2:
     console:
       enabled: true
   main:
     allow-circular-references: true
+  sql:
+    init:
+      data-locations: classpath:data-h2.sql
