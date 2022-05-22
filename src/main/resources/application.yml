@@ -11,7 +11,7 @@ spring:
     active: local
   datasource:
     init-mode: always
-    url: jdbc:h2:mem:testdb # 스프링부트 버전 2.0 이상이신분은 필수로 url 지정 하셔야합니다
+    url: jdbc:h2:mem:testdb # 스프링부트 버전 2.0 이상이신분은 필수로 url 지정 하셔야합니다.
     data: classpath:data-h2.sql # 시작할때 실행시킬 script
   jpa:
     show-sql: true
