@@ -7,11 +7,18 @@
 
     <!--부트스트랩 css 추가-->
     <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+
+    <!--아이엠포트 jQuery, iamport.payment.js-->
+    <script src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+
 </head>
 <body>
+
 <h1>스프링부트로 시작하는 웹 서비스</h1>
 <div class="col-md-12">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#savePostsModal">글 등록</button>
+    <button type="button" class="btn btn-primary" onclick="iamport()">카드 결제</button>
     <br/>
     <br/>
     <!-- 목록 출력 영역 -->
@@ -74,9 +81,10 @@
 <!--부트스트랩 js, jquery 추가-->
 <script src="/js/lib/jquery.min.js"></script>
 <script src="/js/lib/bootstrap.min.js"></script>
-
 <!--custom js 추가-->
 <script src="/js/app/main.js"></script>
+<!--아이엠포트 js 추가-->
+<script src="/js/app/iamport.js"></script>
 
 </body>
 </html>
